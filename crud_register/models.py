@@ -10,6 +10,7 @@ class Company_B00(models.Model):
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     zip_Code = models.IntegerField()
+    active_status = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Company'
@@ -26,6 +27,7 @@ class Insurance_B00(models.Model):
     state = models.CharField(max_length=100)
     zip_Code = models.IntegerField()
     phone = PhoneField(blank=True, help_text='Contact phone number')
+    active_status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.insurance_Rec
@@ -40,6 +42,7 @@ class Insurance_B01(models.Model):
     phone_1 = PhoneField(blank=True, help_text='Contact phone number')
     phone_2 = PhoneField(blank=True, help_text='Contact phone number')
     eMail_Address = models.CharField(max_length=200)
+    active_status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.insurance_Representative_Rec
