@@ -4,7 +4,7 @@ from django.db import models
 
 
 class CRUDAdminLook(admin.ModelAdmin):
-    list_display = ['Company_Rec']
+    list_display = ['company_Rec']
 
 
 admin.site.register(Company_B00, CRUDAdminLook)
